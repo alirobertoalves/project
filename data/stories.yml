@@ -1,8 +1,52 @@
+version: "2.0"
 stories:
- - story: greet and subscribe
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: subscribe
-   - action: newsletter_form
-   - active_loop: newsletter_form
+- story: markplace+info
+  steps:
+  - intent: disponibilidade
+  - action: utter_disponibilidade
+  - intent: info
+  - action: utter_info
+  - intent: finalizacao
+  - action: utter_finalizacao
+- story: inicio+ofertas
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: oferta do dia
+  - action: utter_oferta do dia
+- story: inicio+ajuda
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: ajuda
+  - action: utter_ajuda
+- story: soplastico
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: soplastico
+  - action: utter_soplastico
+  - intent: agradecimento
+  - action: utter_agradecimento
+- story: Soplastico 2
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: soplastico
+  - action: utter_soplastico
+  - intent: ajuda
+  - action: utter_ajuda
+  - intent: agradecimento
+  - action: utter_agradecimento
+- story: despedida+agradecimento
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+  - intent: agradecimento
+  - action: utter_agradecimento
+- story: ofertas divulgadas
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: outras promocoes
+  - action: utter_outras promocoes

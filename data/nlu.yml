@@ -1,21 +1,108 @@
+version: "2.0"
 nlu:
-- intent: greet
+- intent: saudacao
   examples: |
-    - Hi
-    - Hey!
-    - Hallo
-    - Good day
-    - Good morning
-
-- intent: subscribe
+    - Oi
+    - Ei!
+    - Olá
+    - Bom dia!
+    - Boa tarde!
+    - Boa noite!
+    - E ai
+    - bom dia
+    - oi
+    - Boa Noite
+    - Bom dia
+    - boa tarde
+    - oi menina
+    - e ai
+    - hi
+    - oi léria
+- intent: disponibilidade
   examples: |
-    - I want to get the newsletter
-    - Can you send me the newsletter?
-    - Can you sign me up for the newsletter?
-
-- intent: inform
+    - isso está disponível?
+    - ainda está disponível?
+    - Esse item ainda está disponível?
+    - Oi ainda esta disponivel
+    - Tenho interesse nesse item
+    - Ainda disponível
+    - ¿Sigue estando disponible?
+    - Olá, Roberto. Esse item ainda está disponível?
+    - Olá, isso está disponível?
+    - ¿Sigue disponible?
+    - Olá, Roberto! Este artigo ainda está disponível?
+    - esta disponivel
+    - está disponível
+    - está disponível?
+    - Está disponível
+    - ainda está disponível
+- intent: oferta do dia
   examples: |
-    - My email is example@example.com
-    - random@example.com
-    - Please send it to anything@example.com
-    - Email is something@example.com
+    - oferta do dia
+    - ofertas
+- intent: soplastico
+  examples: |
+    - soplastico
+    - galão
+    - garrafa
+    - galoes
+    - galões
+    - Soplastico
+    - fábrica de francisco
+    - pead
+    - vende galões
+    - é da fábrica soplastico
+    - queria garrafas
+    - fabrica
+- intent: info
+  examples: |
+    - entrega
+    - valor
+    - preço
+    - quanto
+    - Entrega
+- intent: ajuda
+  examples: |
+    - ajuda
+- intent: finalizacao
+  examples: |
+    - pagamento
+    - e para pagar
+    - quero pagar
+    - quero comprar
+    - eu quero
+    - como faço pra comprar
+- intent: agradecimento
+  examples: |
+    - Obg
+    - Obrigado
+    - obrigado
+    - OK
+    - obg
+    - Ok
+    - valeu
+    - 👍
+    - ok
+- intent: despedida
+  examples: |
+    - até mais
+    - tchau!
+    - vou nessa!
+    - vou indo
+    - já vou indo
+    - xau
+    - ja vou
+- intent: inesperado
+  examples: |
+    - kkk
+    - golpe
+    - fraude
+    - ...
+- intent: outras promocoes
+  examples: |
+    - outras promocoes
+- intent: como esta
+  examples: |
+    - como vai?
+    - tudo bem?
+    - léria, tudo bem?

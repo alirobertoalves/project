@@ -1,34 +1,93 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- inform
-- subscribe
+- saudacao:
+    use_entities: true
+- disponibilidade:
+    use_entities: true
+- oferta do dia:
+    use_entities: true
+- ajuda:
+    use_entities: true
+- info:
+    use_entities: true
+- soplastico:
+    use_entities: true
+- despedida:
+    use_entities: true
+- finalizacao:
+    use_entities: true
+- agradecimento:
+    use_entities: true
+- inesperado:
+    use_entities: true
+- outras promocoes:
+    use_entities: true
+- como esta:
+    use_entities: true
+entities: []
 slots:
   email:
-    type: unfeaturized
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
 responses:
-  utter_greet:
-  - text: |
-      Hello! How can I help you?
-  - text: |
-      Hi!
-  utter_ask_email:
-  - text: |
-      What is your email address?
-  utter_subscribed:
-  - text: |
-      Check your inbox at {email} in order to finish subscribing to the newsletter!
-  - text: You're all set! Check your inbox at {email} to confirm your subscription.
+  utter_saudacao:
+  - buttons:
+    - payload: oferta do dia
+      title: Oferta do dia
+    - payload: outras promocoes
+      title: Outras promoções
+    text: Olá 👋, aqui é Léria, sua vendedora virtual 🙋‍♀️ Estou aqui para te ajudar a comprar com segurança e garantia de recebimento. O que posso fazer por você hoje?
+  utter_ajuda:
+  - text: 'Veja estas informações de como comprar pela internet:'
+  utter_disponibilidade:
+  - text: 'Sim, claro! Coloquei aqui na página: https://www.facebook.com/ofertadodia/offers'
+  utter_info:
+  - text: Informações to produto ,fulll GENÉRICO COM LINK
+  utter_soplastico:
+  - text: Seja bem vindo ao atendimento da Soplástico!
+  utter_agradecimento:
+  - text: 👍 Você precisa de mais alguma coisa?
+  - text: Disponha!
+  - text: 😃 Continuo à disposição!
+  - text: Quando precisar fique à vontade para me contactar novamente.
+  utter_finalizacao:
+  - text: Esta é a finalizacao da compra!
+  utter_despedida:
+  - text: Vai não fico tão sozinha aqui...
+  - text: Já vai? 😞 Espero rever-te em breve.
+  utter_inesperado:
+  - text: Ainda não sei falar sobre isso. Poderia reformular?
+  - text: Não entendi o que você quis dizer :(
+  - text: Tente novamente. Não entendi :(
+  utter_oferta do dia:
+  - text: 'Fixei uma publicação em nossa página com as melhores ofertas de hoje! Acesse: https://www.facebook.com/ofertadodia'
+  utter_outras promocoes:
+  - text: 'Sim, claro! Coloquei aqui na página: https://www.facebook.com/ofertadodia/offers'
+  utter_como esta:
+  - text: Melhor agora. E você como se sente?
+  - text: Tudo ótimo. E você?
 actions:
-- '...'
-- utter_greet
-- utter_subscribed
+- utter_saudacao
+- utter_oferta do dia
+- utter_ajuda
+- utter_disponibilidade
+- utter_info
+- utter_soplastico
+- utter_despedida
+- utter_finalizacao
+- utter_agradecimento
+- utter_outras promocoes
+- utter_como esta
 forms:
   newsletter_form:
     required_slots:
       email:
       - type: from_text
+e2e_actions: []
